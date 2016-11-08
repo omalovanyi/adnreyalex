@@ -7,7 +7,7 @@ import com.company.adnreyalex.projects.webshop.service.impl.ProductServiceImpl;
 /**
  * Created by Александр on 05.11.2016.
  */
-public class main {
+public class MainJava {
 
     public static void main(String[] args) {
 

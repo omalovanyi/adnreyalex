@@ -8,6 +8,11 @@ import com.company.adnreyalex.projects.webshop.domain.Product;
  */
 public class ProductDaoJavaImpl implements ProductDao {
 
+    public ProductDaoJavaImpl() {
+
+        System.out.println("Constructor ProductDaoJavaImpl");
+    }
+
     public Product getByName(String name) {
         return null;
     }
