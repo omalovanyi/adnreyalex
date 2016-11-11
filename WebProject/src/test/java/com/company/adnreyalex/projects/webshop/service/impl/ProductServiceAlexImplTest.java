@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  */
 public class ProductServiceAlexImplTest {
 
-    @Test
+    //@Test
     public void findProductByName() throws Exception {
 
     }

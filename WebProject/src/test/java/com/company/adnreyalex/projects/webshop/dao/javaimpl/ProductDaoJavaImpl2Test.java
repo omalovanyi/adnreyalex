@@ -2,9 +2,12 @@ package com.company.adnreyalex.projects.webshop.dao.javaimpl;
 
 import com.company.adnreyalex.projects.webshop.dao.ProductDao;
 import com.company.adnreyalex.projects.webshop.domain.Product;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +15,24 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by Александр on 05.11.2016.
+ * Created by Александр on 10.11.2016.
  */
-public class ProductDaoJavaImplTest {
+public class ProductDaoJavaImpl2Test {
+
 
     List<Product> databaseMock=new ArrayList<>();
 
+    ProductDao productDao;
+
     @Before
     public void setUp() throws Exception {
+
+        ApplicationContext context= new ClassPathXmlApplicationContext("appContextTest.xml");
+
+
+        productDao=context.getBean(ProductDao.class);
+
+
         Product product1=new Product();
         Product product2=new Product();
         Product product3=new Product();
@@ -44,15 +57,14 @@ public class ProductDaoJavaImplTest {
         databaseMock.add(product3);
 
     }
-
-    //@Test
+    @Test
     public void getByName() throws Exception {
 
         Product actualProduct1;
         Product actualProduct2;
         Product actualProduct3;
 
-        ProductDao productDao=new ProductDaoJavaImpl();
+
 
         actualProduct1 = productDao.getByName("Samsung");
         actualProduct2 = productDao.getByName("Nokia");
@@ -63,5 +75,6 @@ public class ProductDaoJavaImplTest {
         Assert.assertEquals(actualProduct3,databaseMock.get(2));
 
     }
+
 
 }
