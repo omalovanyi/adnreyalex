@@ -4,6 +4,7 @@ import com.company.adnreyalex.projects.webshop.dao.ProductDao;
 import com.company.adnreyalex.projects.webshop.domain.Product;
 import com.company.adnreyalex.projects.webshop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,8 +16,9 @@ public class ProductServiceImpl2 implements ProductService {
     @Autowired
     private ProductDao productDao;
 
+
     public ProductServiceImpl2() {
-        System.out.println("ProductServiceImpl2");
+        System.out.println("ProductServiceImpl2 constructor");
     }
 
     @Override

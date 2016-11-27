@@ -35,7 +35,7 @@ private ProductDao productDao;
 
     public Product findProductByName(String nameProduct) {
 
-        return productDao.getByName("nameProduct");
+        return productDao.getByName(nameProduct);
 
     }
 

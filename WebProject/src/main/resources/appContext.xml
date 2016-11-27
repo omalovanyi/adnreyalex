@@ -4,19 +4,21 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
 <!--
- <bean id="productDao" class="com.company.adnreyalex.projects.webshop.dao.javaimpl.ProductDaoJavaImpl"/>
 
-    <bean id="productService" class="com.company.adnreyalex.projects.webshop.service.impl.ProductServiceImpl">
-&lt;!&ndash;    <constructor-arg ref="productDao"/>&ndash;&gt;
-        <property name="productDao" ref="productDao"/>
+    <bean id="productDao22" class="com.company.adnreyalex.projects.webshop.dao.javaimpl.ProductDaoJavaImpl2">
+    </bean>
+
+    <bean id="productService22" class="com.company.adnreyalex.projects.webshop.service.impl.ProductServiceImpl2">
+
+     <constructor-arg ref="productDao22"/>
+
+
+       &lt;!&ndash; <property name="productDao" ref="productDao"/>&ndash;&gt;
 
     </bean>
 -->
-
     <context:component-scan base-package="com.company.adnreyalex.projects.webshop"/>
-
 
 
 </beans>

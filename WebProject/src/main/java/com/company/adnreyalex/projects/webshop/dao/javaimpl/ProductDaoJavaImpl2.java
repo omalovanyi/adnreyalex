@@ -2,7 +2,10 @@ package com.company.adnreyalex.projects.webshop.dao.javaimpl;
 
 import com.company.adnreyalex.projects.webshop.dao.ProductDao;
 import com.company.adnreyalex.projects.webshop.domain.Product;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
@@ -16,10 +19,11 @@ public class ProductDaoJavaImpl2 implements ProductDao {
     public ProductDaoJavaImpl2() {
 
         System.out.println("ProductDaoJavaImpl2 constructor");
+
     }
 
     @PostConstruct
-    void initDataBase() {
+    public void initDataBase() {
 
         System.out.println("Init method ProductDaoJavaImpl2");
 
@@ -51,7 +55,6 @@ public class ProductDaoJavaImpl2 implements ProductDao {
     public Product getByName(String name) {
 
         return productsDB.get(name);
-
 
     }
 }
