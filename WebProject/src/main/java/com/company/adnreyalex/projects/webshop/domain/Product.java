@@ -1,54 +1,16 @@
 package com.company.adnreyalex.projects.webshop.domain;
 
-/**
- * Created by Александр on 05.11.2016.
- */
-
 public class Product {
 
     private Integer id;
     private String nameProduct;
-    private Integer availableProduct;
-    private long price;
+    private boolean availableProduct;
+    private double price;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Product product = (Product) o;
-
-        if (getPrice() != product.getPrice()) return false;
-        if (!getId().equals(product.getId())) return false;
-        if (!getNameProduct().equals(product.getNameProduct())) return false;
-        return getAvailableProduct().equals(product.getAvailableProduct());
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getId().hashCode();
-        result = 31 * result + getNameProduct().hashCode();
-        result = 31 * result + getAvailableProduct().hashCode();
-        result = 31 * result + (int) (getPrice() ^ (getPrice() >>> 32));
-        return result;
-    }
-
-    public long getPrice() {
-        return price;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", nameProduct='" + nameProduct + '\'' +
-                ", availableProduct=" + availableProduct +
-                ", price=" + price +
-                '}';
-    }
-
-    public void setPrice(long price) {
+    public Product(Integer id, String nameProduct, boolean availableProduct, Double price) {
+        this.id = id;
+        this.nameProduct = nameProduct;
+        this.availableProduct = availableProduct;
         this.price = price;
     }
 
@@ -68,12 +30,29 @@ public class Product {
         this.nameProduct = nameProduct;
     }
 
-    public Integer getAvailableProduct() {
+    public boolean isAvailableProduct() {
         return availableProduct;
     }
 
-    public void setAvailableProduct(Integer availableProduct) {
+    public void setAvailableProduct(boolean availableProduct) {
         this.availableProduct = availableProduct;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", nameProduct='" + nameProduct + '\'' +
+                ", availableProduct=" + availableProduct +
+                ", price=" + price +
+                '}';
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
