@@ -1,6 +1,6 @@
 package com.company.adnreyalex.projects.webshop.web;
 
-import javax.servlet.*;
+
 import java.io.IOException;
 
 /**

@@ -11,6 +11,10 @@
 
     <dependencies>
 
+
+
+
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -24,12 +28,11 @@
         </dependency>
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.2.5.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>

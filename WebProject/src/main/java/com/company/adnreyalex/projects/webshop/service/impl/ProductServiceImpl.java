@@ -3,8 +3,7 @@ package com.company.adnreyalex.projects.webshop.service.impl;
 import com.company.adnreyalex.projects.webshop.dao.ProductDao;
 import com.company.adnreyalex.projects.webshop.domain.Product;
 import com.company.adnreyalex.projects.webshop.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +12,10 @@ import java.util.stream.Collectors;
 /**
  * Created by Александр on 10.11.2016.
  */
-@Service
+//@Service
 public class ProductServiceImpl implements ProductService {
 
-    @Autowired
+   /// @Autowired
     private ProductDao productDao;
 
 

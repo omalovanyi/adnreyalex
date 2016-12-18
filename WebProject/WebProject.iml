@@ -36,7 +36,7 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.3.1" level="project" />
   </component>
 </module>
