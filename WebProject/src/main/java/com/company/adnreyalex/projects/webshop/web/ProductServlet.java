@@ -31,15 +31,11 @@ public class ProductServlet extends HttpServlet {
 
     public ProductServlet() {
 
-
-        System.out.println("Bean ProductServlet created="+this);
-
-
-        //System.out.println("Autowired in constructor"+productService);
+        System.out.println("Bean ProductServlet created = "+this);
 
     }
 
-    @Override
+ /*   @Override
     public void init(ServletConfig config) throws ServletException  {
 
       //  super.init(config);
@@ -52,10 +48,14 @@ public class ProductServlet extends HttpServlet {
 
 
     }
-
+*/
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=utf-8");
+
+
+        resp.getWriter().write("Hello time = " + System.currentTimeMillis());
+
+       // resp.setContentType("text/html;charset=utf-8");
 
 
         //req.getSession();
@@ -64,12 +64,14 @@ public class ProductServlet extends HttpServlet {
 
 
 
-        PrintWriter out = resp.getWriter();
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<h1>Hello Servlet Get</h1>");
+       // PrintWriter out = resp.getWriter();
 
-        System.out.println(req.getMethod());
+
+      //  out.println("<html>");
+       // out.println("<body>");
+       // out.println("<h1>Hello Servlet Get</h1>");
+
+       // System.out.println(req.getMethod());
 
         // out.println("<table>");
         //System.out.println("get2");
@@ -92,10 +94,10 @@ public class ProductServlet extends HttpServlet {
         }
 */
        // System.out.println("get5");
-        out.println("</table>");
+      //  out.println("</table>");
 
-        out.println("</body>");
-        out.println("</html>");
+      //  out.println("</body>");
+      //  out.println("</html>");
 
         //out.flush();
        // out.close();

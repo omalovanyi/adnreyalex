@@ -1,0 +1,4 @@
+Insert into "PRODUCT" (ID,NAME,FLAG_AVAILABLE,PRICE) values (1,'Samsung','Y',100);
+Insert into "PRODUCT" (ID,NAME,FLAG_AVAILABLE,PRICE) values (2,'Nokia','Y',50);
+Insert into "PRODUCT" (ID,NAME,FLAG_AVAILABLE,PRICE) values (3,'Iphone','N',250);
+
