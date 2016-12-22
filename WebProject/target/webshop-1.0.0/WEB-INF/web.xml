@@ -7,16 +7,22 @@
          version="3.1">
 
 
-   <!-- <context-param>
+<!--    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:appContext.xml</param-value>
-    </context-param>
+    </context-param>-->
 
     <listener>
         <listener-class>
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
-    </listener>-->
+    </listener>
+
+
+    <listener>
+        <description>Servlet Context Listener Example</description>
+        <listener-class>com.company.adnreyalex.projects.webshop.web.MyServletContextListener</listener-class>
+    </listener>
 
 
     <servlet>
