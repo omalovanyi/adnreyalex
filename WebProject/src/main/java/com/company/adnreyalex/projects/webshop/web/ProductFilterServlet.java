@@ -1,14 +1,15 @@
 package com.company.adnreyalex.projects.webshop.web;
 
 
+import javax.servlet.*;
 import java.io.IOException;
 
 /**
  * Created by maoleks on 12/7/2016.
  */
-public class ProductFilterServlet /*implements Filter */{
+public class ProductFilterServlet implements Filter {
 
-   /* public ProductFilterServlet() {
+    public ProductFilterServlet() {
 
         System.out.println("constructor ProductFilterServlet");
     }
@@ -24,9 +25,11 @@ public class ProductFilterServlet /*implements Filter */{
 
         ///add base filter
 
-        System.out.println("doFilter ProductFilterServlet");
+        System.out.println("before doFilter ProductFilterServlet=servletRequest");
 
+        filterChain.doFilter(servletRequest,servletResponse);
 
+        System.out.println(" after doFilter ProductFilterServlet=servletResponse");
     }
 
     @Override
@@ -35,5 +38,5 @@ public class ProductFilterServlet /*implements Filter */{
 
 
 
-    }*/
+    }
 }

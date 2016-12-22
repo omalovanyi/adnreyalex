@@ -1,7 +1,10 @@
 package com.company.adnreyalex.projects.webshop.web;
 
 
+import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * Created by maoleks on 11/29/2016.
@@ -9,91 +12,72 @@ import java.io.IOException;
 //@Controller
     //try use Servlet aqpi 3.1
 //@Configurable
-public class ProductServlet/* extends HttpServlet*/ {
+public class ProductServlet extends HttpServlet {
 
-   // @Autowired
+    // @Autowired
     //ProductService productService;
 
     public ProductServlet() {
 
-        System.out.println("Bean ProductServlet created = "+this);
-
+        System.out.println("Constructor ProductServlet created = " + this);
     }
 
- /*   @Override
-    public void init(ServletConfig config) throws ServletException  {
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        System.out.println("init ProductServlet created = " + this);
+       Enumeration<String> e = config.getInitParameterNames();
 
-      //  super.init(config);
-       // SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
-      //  System.out.println("Autowired in Init");
-       // System.out.println("Autowired in Init"+productService);
-       // System.out.println(config.getServletContext().getMajorVersion());
+        ServletContext servletContext= config.getServletContext();
 
-
-
-
-    }
-*/
-
-   /* public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-
-        resp.getWriter().write("Hello time = " + System.currentTimeMillis());
-
-       // resp.setContentType("text/html;charset=utf-8");
-
-
-        //req.getSession();
-        //System.out.println("get");
-
-
-
-
-       // PrintWriter out = resp.getWriter();
-
-
-      //  out.println("<html>");
-       // out.println("<body>");
-       // out.println("<h1>Hello Servlet Get</h1>");
-
-       // System.out.println(req.getMethod());
-
-        // out.println("<table>");
-        //System.out.println("get2");
-
-
-       // System.out.println(productService.findAllAvailableProduct().toString());
-       // System.out.println("get3");
-        *//*for (Product product: productService.findAllAvailableProduct()) {
-
-           // System.out.println("get4");
-
-           out.println("<tr>");
-           // out.println("<td>");
-             out.println("<td>"+product.getNameProduct()+"</td>");
-            System.out.println(product.toString());
-            //out.println("</td>");
-
-            out.println("<tr>");
-
+        String str = "";
+        while (e.hasMoreElements()) {
+            str = e.nextElement();
+            System.out.println("Name: " + str);
+            servletContext.setAttribute("name", str);
+            System.out.println("Value: " + config.getInitParameter(str));
+            servletContext.setAttribute("value", config.getInitParameter(str));
         }
-*//*
-       // System.out.println("get5");
-      //  out.println("</table>");
 
-      //  out.println("</body>");
-      //  out.println("</html>");
 
-        //out.flush();
-       // out.close();
+
+
 
 
 
     }
-*/
+
+
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Cookie cookie=new Cookie("count","1");
+        resp.addCookie(cookie);
+
+         HttpSession session=  req.getSession();
+        System.out.println(session);
+        ServletContext servletContext= session.getServletContext();
+
+        servletContext.setAttribute("session", session);
+
+        System.out.println("doGet ProductServlet= " + this);
+
+        //RequestDispatcher requestDispatcher =  req.getRequestDispatcher("/hello");
+
+       // System.out.println(requestDispatcher);
+
+
+       // requestDispatcher.forward(req, resp);
+
+
+        resp.getWriter().write("Hello time = " + servletContext.getAttribute("session"));
+
+        //req.getRequestDispatcher("productServlet2").forward(req, resp);
+
+        //req.getRequestDispatcher("ProductServlet2").include(req, resp);
+
+    }
 
 }
+
 
 
 

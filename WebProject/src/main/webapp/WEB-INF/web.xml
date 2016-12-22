@@ -22,12 +22,62 @@
     <servlet>
         <servlet-name>productServlet</servlet-name>
         <servlet-class>com.company.adnreyalex.projects.webshop.web.ProductServlet</servlet-class>
+        <init-param>
+            <param-name>NameWeb</param-name>
+            <param-value>TestExample</param-value>
+            <param-name>driver</param-name>
+            <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>productServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <url-pattern>/start</url-pattern>
     </servlet-mapping>
 
 
-</web-app>
+    <servlet>
+        <servlet-name>productServlet2</servlet-name>
+        <servlet-class>com.company.adnreyalex.projects.webshop.web.ProductServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>productServlet2</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productServlet3</servlet-name>
+        <servlet-class>com.company.adnreyalex.projects.webshop.web.ProductServletC</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>productServlet3</servlet-name>
+        <url-pattern>/count</url-pattern>
+    </servlet-mapping>
+<!--
+<filter>
+    <filter-name>LogFilter</filter-name>
+    <filter-class>com.company.adnreyalex.projects.webshop.web.ProductFilterServlet</filter-class>
+
+</filter>
+
+
+<filter-mapping>
+<filter-name>LogFilter</filter-name>
+<url-pattern>/start</url-pattern>
+</filter-mapping>
+
+
+    <filter>
+    <filter-name>LogFilter2</filter-name>
+    <filter-class>com.company.adnreyalex.projects.webshop.web.ProductFilterServlet2</filter-class>
+
+</filter>
+<filter-mapping>
+<filter-name>LogFilter2</filter-name>
+<url-pattern>/start</url-pattern>
+</filter-mapping>-->
+
+
+        </web-app>
